@@ -13,7 +13,6 @@ add_executable(hello_world
 # Add the executable target for the unit tests
 add_executable(test_hello
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_hello.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/tests/TestHarness.cpp  # Include TestHarness.cpp only for the test_hello executable
 )
 
 # Link the CppUTest library with the test executable

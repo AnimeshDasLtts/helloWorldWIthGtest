@@ -1,3 +1,4 @@
+#include <sstream> 
 #include "CppUTest/TestHarness.h"
 #include "../src/main.cpp"
 

@@ -1,5 +1,8 @@
-#include "CppUTest/CommandLineTestRunner.h"
+#include <gtest/gtest.h>
 
-int main(int argc, char* argv[]) {
-    return CommandLineTestRunner::RunAllTests(argc, argv);
+// Dummy implementation of TestHarness.cpp, no changes needed
+
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }

@@ -1,9 +1,8 @@
-# CMakeLists.txt
 cmake_minimum_required(VERSION 3.10)
 project(HelloWorld)
 
-# Include directories for CppUTest headers
-include_directories(${CPPUTEST_HOME}/include)
+# Include directories for Google Test headers
+include_directories(${GTEST_INCLUDE_DIRS})
 
 # Add the executable target for the Hello World application
 add_executable(hello_world 
@@ -15,8 +14,9 @@ add_executable(test_hello
     ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_hello.cpp
 )
 
-# Link the CppUTest library with the test executable
-target_link_libraries(test_hello PRIVATE CppUTest)
+# Link the Google Test library with the test executable
+target_link_libraries(test_hello PRIVATE gtest)
 
-# Enable CppUTest's automatic discovery of tests
-add_test(NAME test_hello COMMAND test_hello)
+# Enable Google Test's automatic discovery of tests
+gtest_discover_tests(test_hello)
+
